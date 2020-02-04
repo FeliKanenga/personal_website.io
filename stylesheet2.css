@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hide-mob {
+    display: none;
+}
+
+.nav-bar {
+    grid-area: n;
+    color: #fff;
+    font-size: smaller;
+    text-align: right;
+    height: 6vh;
+    padding-top: 7px;
+    margin-left: 5%;
+    margin-right: 1em;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.black-container {
+    position: relative;
+    background-color: rgb(0, 13, 32);
+    padding: 4em 0;
+    margin: 5em 1em 5em;
+    border-top-left-radius: 40px;
+    transform: skewY(-5deg);
+    color: white;
+}
+
+.form {
+    position: inherit;
+    text-align: center;
+}
+
+.form ul {
+    padding: 1em;
+    list-style: none;
+}
+
+.black-container form {
+    transform: skewY(5deg);
+    margin-bottom: 0.5em;
+    padding: 0 0.5em;
+}
+
+.black-container:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: rgb(0, 13, 32);
+    position: absolute;
+    top: -39px;
+    right: 0;
+    z-index: -2;
+}
+
+.black-container:after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    top: -80px;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.button {
+    background-color: rgba(228, 149, 31, 0.842);
+    width: 150%;
+    height: 4vh;
+    display: block;
+    padding-top: 8px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.form a {
+    position: absolute;
+    text-align: center;
+    margin: 0em 0.1em;
+    padding: 0.5em;
+    left: 7em;
+}
+
+@media only screen and (min-width: 450px) {
+    .form a {
+        position: absolute;
+        text-align: center;
+        right: 20em;
+        padding: 0.5em;
+    }
+    .button {
+        background-color: rgba(228, 149, 31, 0.842);
+        width: 40%;
+        height: 4vh;
+        display: block;
+        padding-top: 8px;
+        border-radius: 20px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .hide-mob {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        margin: -0.7em 5em 2em;
+        right: 3em;
+        z-index: 7;
+    }
+    .hide-mob li {
+        list-style: none;
+        font-size: small;
+        color: black;
+    }
+    .hide-mob li {
+        padding: 0 5.5em 3em;
+        font: outline;
+    }
+    .nav-bar i {
+        display: none;
+    }
+    .nav-bar a {
+        text-decoration: none;
+        color: purple;
+        margin: 5px;
+    }
+    .nav-bar a :hover {
+        text-decoration: underline;
+    }
+}
